@@ -4,6 +4,7 @@ const userModel = require('./user.model');
 
 async function save(req, res) {
     const newUser = req.body;
+    req.body.photo = await `photos/${req.file.filename}`;
     const userSaved = await userModel.save(newUser);
     return res.status(200).json(userSaved);
 }

@@ -12,7 +12,8 @@ let userSchema = new Schema({
     password: String,
     phone: String,
     address: String,
-    birthdate: {type:Date}
+    birthdate: {type:Date},
+    photo: String
 },
 {
     versionKey: false
