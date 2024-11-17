@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
+
 const DB = 'tiendaVirtual';
-const REF = 'mongodb://localhost:27017/';
+const REF = process.env.DB_REF;
 
 async function connect(){
     await mongoose.connect(REF+DB, {
